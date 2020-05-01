@@ -1,10 +1,17 @@
 import React from 'react';
-import {StyleSheet, View, Image, Platform, Text, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Image,
+  Platform,
+  Text,
+  ScrollView,
+} from 'react-native';
 
 const App = () => {
   return (
     <>
-      <View>
+      <ScrollView>
         <View style={styles.header}>
           <Image
             style={styles.banner}
@@ -39,8 +46,29 @@ const App = () => {
               />
             </View>
           </ScrollView>
+          <Text style={styles.titulo}>Otro titulo</Text>
+          <View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/mejores1.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/mejores2.jpg')}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/mejores3.jpg')}
+              />
+            </View>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
@@ -55,15 +83,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    marginLeft: 10,
+    marginHorizontal: 10,
   },
   ciudad: {
     height: 250,
+    width: 250,
+    marginRight: 10,
   },
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
     paddingVertical: 10,
+  },
+  mejores: {
+    width: '100%',
+    height: 200,
+    marginVertical: 2.5,
   },
 });
 
